@@ -1,5 +1,5 @@
 {
-    "name": "avffromspb/test",
+    "name": "avffromspb/brain-games",
     "description": "test project",
     "license": "MIT",
     "authors": [
@@ -11,6 +11,11 @@
     "bin": [
       "bin/brain-games"
     ],
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
     }
