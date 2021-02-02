@@ -11,11 +11,8 @@ function parity()
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     Line('Answer "yes" if the number is even, otherwise answer "no".');
-    
-    
     $winner = 3;
-
-    for ($i = 1; $i <= $winner; $i ++) {
+    for ($i = 1; $i <= $winner; $i++) {
         $randomnumber = mt_rand(1, 100);
         line("Question: %s", $randomnumber);
         $answer = prompt('Your answer');
@@ -30,6 +27,3 @@ function parity()
     }
     line("Congratulation, $name !");
 }
-
-
-
