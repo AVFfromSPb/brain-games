@@ -1,0 +1,12 @@
+{
+    "name": "avffromspb/test",
+    "description": "test project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksandr Fedorov",
+            "email": "a.v.fedorov5@gmail.com"
+        }
+    ],
+    "require": {}
+}
