@@ -8,5 +8,8 @@
             "email": "a.v.fedorov5@gmail.com"
         }
     ],
+    "bin": [
+      "bin/brain-games"
+    ],
     "require": {}
 }
