@@ -24,13 +24,20 @@ function startBrainGames($gamesType)
     $winner = 3;
 
     while ($count <= $winner) {
-        [$randomNumber, $correctAnswer] = getTaskEven();
+        switch ($gamesType) {
+            case 'even':
+                [$expression, $correctAnswer] = getTaskEven();
+                break;
+            case 'calc':
+                [$expression, $correctAnswer] = getTaskCalc();
+                break;
+        }
         line();
-        line('Question: %s', $randomNumber);
-        $answer = prompt('Your answer: ');
+        line('Question: %s', $expression);
+        $answer = strtolower(prompt('Your answer: '));
         if ($correctAnswer === $answer) {
             line('Correct!');
-            $count ++;
+            $count++;
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, %s!", $name);
@@ -39,4 +46,3 @@ function startBrainGames($gamesType)
     }
     line('Congratulation, %s!', $name);
 }
-

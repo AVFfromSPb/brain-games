@@ -4,7 +4,7 @@ namespace BrainGames\src\Games\Even;
 
 function getTaskEven()
 {
-    $randomNumber = mt_rand(1, 100);
-    $correctAnswer = $randomNumber % 2 === 0 ? 'yes' : 'no';
-    return [$randomNumber, $correctAnswer];
+    $expression = rand(1, 100);
+    $correctAnswer = $expression % 2 === 0 ? 'yes' : 'no';
+    return [$expression, $correctAnswer];
 }
