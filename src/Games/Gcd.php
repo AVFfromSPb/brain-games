@@ -19,7 +19,6 @@ function getGcd($firstOperand, $secondOperand)
     }
     return getGcd($remainder, $secondOperand);
 }
-print_r(getGcd(28, 16));
 
 function getTaskGcd()
 {
