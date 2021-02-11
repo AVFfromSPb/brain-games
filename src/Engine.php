@@ -6,12 +6,14 @@ use function Cli\line;
 use function Cli\prompt;
 use function BrainGames\src\Games\Even\getTaskEven;
 use function BrainGames\src\Games\Calc\getTaskCalc;
+use function BrainGames\src\Games\Gcd\getTaskGcd;
 
 function startBrainGames($gamesType)
 {
     $tasks = [
         'even' => 'Answer "yes" if the number is even, otherwise answer "no".',
-        'calc' => 'What is the result of the expression?'
+        'calc' => 'What is the result of the expression?',
+        'gcd' => 'Find the greatest common divisor of given numbers.'
     ];
     line('Welcome to the Brain Games!');
     $task = $tasks[$gamesType];
@@ -30,6 +32,9 @@ function startBrainGames($gamesType)
                 break;
             case 'calc':
                 [$expression, $correctAnswer] = getTaskCalc();
+                break;
+            case 'gcd':
+                [$expression, $correctAnswer] = getTaskGcd();
                 break;
         }
         line();
