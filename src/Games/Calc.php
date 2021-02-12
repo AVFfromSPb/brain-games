@@ -2,12 +2,13 @@
 
 namespace BrainGames\src\Games\Calc;
 
-function getTaskCalc()
+function getTaskCalc(): array
 {
     $firstNumber = rand(1, 20);
     $secomdNumber = rand(1, 20);
     $arithmeticSingsArray = ['+', '-', '*'];
-    $arithmeticSingsRandom = $arithmeticSingsArray[rand(0, 2)];
+    $length = count($arithmeticSingsArray);
+    $arithmeticSingsRandom = $arithmeticSingsArray[rand(0, $length - 1)];
     $expressionQuestion = "$firstNumber $arithmeticSingsRandom $secomdNumber";
     switch ($arithmeticSingsRandom) {
         case '+':
