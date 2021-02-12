@@ -4,7 +4,7 @@ namespace BrainGames\src\Games\Prime;
 
 function isPrime($number): bool
 {
-    if ($number % 2 === 0) {
+    if ($number !== 2 && $number % 2 === 0 || $number <= 1) {
         return false;
     }
     $limit = sqrt($number);
