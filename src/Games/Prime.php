@@ -19,7 +19,7 @@ function isPrime($number): bool
 
 function getTaskPrime()
 {
-    $expression = rand(1, 100);
-    $correctAnswer = isPrime($expression) ? 'yes' : 'no';
-    return [$expression, $correctAnswer];
+    $expressionQuestion = rand(1, 100);
+    $correctAnswer = isPrime($expressionQuestion) ? 'yes' : 'no';
+    return [$expressionQuestion, $correctAnswer];
 }

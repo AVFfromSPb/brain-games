@@ -24,7 +24,7 @@ function getTaskGcd()
 {
     $firstNumber = rand(1, 20);
     $secondNumber = rand(1, 20);
-    $expression = "$firstNumber $secondNumber";
+    $expressionQuestion = "$firstNumber $secondNumber";
     $correctAnswer = (string) getGcd($firstNumber, $secondNumber);
-    return [$expression, $correctAnswer];
+    return [$expressionQuestion, $correctAnswer];
 }

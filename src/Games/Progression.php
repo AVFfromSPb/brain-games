@@ -19,6 +19,6 @@ function getTaskProgression(): array
             $correctAnswer = (string) ($firstNumber + ($difference * $i));
         }
     }
-    $expression = implode(' ', $progression);
-    return [$expression, $correctAnswer];
+    $expressionQuestion = implode(' ', $progression);
+    return [$expressionQuestion, $correctAnswer];
 }

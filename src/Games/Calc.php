@@ -8,7 +8,7 @@ function getTaskCalc()
     $secomdNumber = rand(1, 20);
     $arithmeticSingsArray = ['+', '-', '*'];
     $arithmeticSingsRandom = $arithmeticSingsArray[rand(0, 2)];
-    $expression = "$firstNumber $arithmeticSingsRandom $secomdNumber";
+    $expressionQuestion = "$firstNumber $arithmeticSingsRandom $secomdNumber";
     switch ($arithmeticSingsRandom) {
         case '+':
             $correctAnswer = (string) ($firstNumber + $secomdNumber);
@@ -20,5 +20,5 @@ function getTaskCalc()
             $correctAnswer = (string) ($firstNumber * $secomdNumber);
             break;
     }
-    return [$expression, $correctAnswer];
+    return [$expressionQuestion, $correctAnswer];
 }

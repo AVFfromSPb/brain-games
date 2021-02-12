@@ -26,25 +26,25 @@ function startBrainGames($gamesType)
     $name = prompt('May i have your name?');
     line('Hello, %s!', $name);
 
-    for ($i = 1, $wincount = 3; $i <= $wincount; $i ++){
+    for ($i = 1, $wincount = 3; $i <= $wincount; $i++) {
         switch ($gamesType) {
             case 'even':
-                [$expression, $correctAnswer] = getTaskEven();
+                [$expressionQuestion, $correctAnswer] = getTaskEven();
                 break;
             case 'calc':
-                [$expression, $correctAnswer] = getTaskCalc();
+                [$expressionQuestion, $correctAnswer] = getTaskCalc();
                 break;
             case 'gcd':
-                [$expression, $correctAnswer] = getTaskGcd();
+                [$expressionQuestion, $correctAnswer] = getTaskGcd();
                 break;
             case 'progression':
-                [$expression, $correctAnswer] = getTaskProgression();
+                [$expressionQuestion, $correctAnswer] = getTaskProgression();
                 break;
             case 'prime':
-                [$expression, $correctAnswer] = getTaskPrime();
+                [$expressionQuestion, $correctAnswer] = getTaskPrime();
         }
         line();
-        line('Question: %s', $expression);
+        line('Question: %s', $expressionQuestion);
         $answer = strtolower(prompt('Your answer: '));
         if ($correctAnswer === $answer) {
             line('Correct!');
