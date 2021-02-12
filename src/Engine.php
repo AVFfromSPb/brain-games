@@ -26,10 +26,10 @@ function startBrainGames($gamesType)
     $name = prompt('May i have your name?');
     line('Hello, %s!', $name);
 
-    $count = 1;
-    $winner = 3;
+    $winCount = 1;
+    $limitWinCount = 3;
 
-    while ($count <= $winner) {
+    while ($winCount <= $limitWinCount) {
         switch ($gamesType) {
             case 'even':
                 [$expression, $correctAnswer] = getTaskEven();
@@ -51,7 +51,7 @@ function startBrainGames($gamesType)
         $answer = strtolower(prompt('Your answer: '));
         if ($correctAnswer === $answer) {
             line('Correct!');
-            $count++;
+            $winCount++;
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$correctAnswer'.");
             line("Let's try again, %s!", $name);
